@@ -1,26 +1,20 @@
 package org.example;
 
 import org.example.model.PoliticialParty;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
 
+import org.junit.Test;
 import java.util.ArrayList;
-
+import static org.junit.Assert.*;
 import static org.example.Main.*;
-import static org.junit.jupiter.api.Assertions.*;
 
-class MainTest {
+
+public class MainTest {
 
     public static ArrayList<PoliticialParty> parties = new ArrayList<>();
 
-    @BeforeEach
-    void afterEach() {
-         parties.clear();
-    }
 
     @Test
-    void isAddedInStaticListOfPartiesWhenIncreaseMethodIsInvoked() {
+    public void testisAddedInStaticListOfPartiesWhenIncreaseMethodIsInvoked() {
         // Given
 
         // When
@@ -29,13 +23,13 @@ class MainTest {
         // Then
         for (PoliticialParty party:parties){
             if (party.getName()=="AKP"){
-                Assertions.assertTrue(party.getName()=="AKP");
+                assertTrue(party.getName()=="AKP");
             }
         }
     }
 
     @Test
-    void isIncreasePartyVote() {
+    public void testisIncreasePartyVote() {
         // Given
 
 
@@ -47,14 +41,14 @@ class MainTest {
         // Then
         for (PoliticialParty party:parties){
             if (party.getName()=="AKP"){
-                Assertions.assertTrue(party.getVote()==3);
+                assertTrue(party.getVote()==3);
             }
         }
 
     }
 
     @Test
-    void isDecreasePartyVote() {
+    public void testisDecreasePartyVote() {
         // Given
 
 
@@ -67,14 +61,14 @@ class MainTest {
         // Then
         for (PoliticialParty party:parties){
             if (party.getName()=="AKP"){
-                Assertions.assertTrue(party.getVote()==2);
+                assertTrue(party.getVote()==2);
             }
         }
 
     }
 
     @Test
-    void whenNoPartyMatchWithTheParameterGiveMessageAndReturnZero() {
+    public void testwhenNoPartyMatchWithTheParameterGiveMessageAndReturnZero() {
         // Given
         parties = new ArrayList<>();
         // When

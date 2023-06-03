@@ -6,31 +6,31 @@ import java.util.ArrayList;
 
 <span class="nc" id="L7">public class Main {</span>
 
-<span class="nc" id="L9">    private static final ArrayList&lt;PoliticialParty&gt; Parties = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L9">    private static final ArrayList&lt;PoliticialParty&gt; Parties = new ArrayList&lt;&gt;();</span>
 
     public static void main(String[] args) {
 <span class="nc" id="L12">    }</span>
 
     public static int increaseVote(String partyName){
-<span class="nc bnc" id="L15" title="All 2 branches missed.">        for (PoliticialParty party:Parties){</span>
-<span class="nc bnc" id="L16" title="All 2 branches missed.">            if (party.getName()==partyName){</span>
-<span class="nc" id="L17">                party.increaseVote();</span>
-<span class="nc" id="L18">                return party.getVote();</span>
+<span class="fc bfc" id="L15" title="All 2 branches covered.">        for (PoliticialParty party:Parties){</span>
+<span class="pc bpc" id="L16" title="1 of 2 branches missed.">            if (party.getName()==partyName){</span>
+<span class="fc" id="L17">                party.increaseVote();</span>
+<span class="fc" id="L18">                return party.getVote();</span>
 <span class="nc" id="L19">            }}</span>
-<span class="nc" id="L20">        PoliticialParty newParty = new PoliticialParty(partyName);</span>
-<span class="nc" id="L21">        Parties.add(newParty);</span>
-<span class="nc" id="L22">        newParty.increaseVote();</span>
-<span class="nc" id="L23">        return newParty.getVote();</span>
+<span class="fc" id="L20">        PoliticialParty newParty = new PoliticialParty(partyName);</span>
+<span class="fc" id="L21">        Parties.add(newParty);</span>
+<span class="fc" id="L22">        newParty.increaseVote();</span>
+<span class="fc" id="L23">        return newParty.getVote();</span>
     }
 
     public static int decreaseVote(String partyName){
-<span class="nc bnc" id="L27" title="All 2 branches missed.">        for (PoliticialParty party:Parties){</span>
-<span class="nc bnc" id="L28" title="All 2 branches missed.">            if (party.getName()==partyName){</span>
-<span class="nc" id="L29">                party.decreaseVote();</span>
-<span class="nc" id="L30">                return party.getVote();</span>
-<span class="nc" id="L31">            }}</span>
-<span class="nc" id="L32">        System.out.println(&quot;No such a Party named &quot;+partyName+&quot;.&quot;);</span>
-<span class="nc" id="L33">        return 0;</span>
+<span class="fc bfc" id="L27" title="All 2 branches covered.">        for (PoliticialParty party:Parties){</span>
+<span class="fc bfc" id="L28" title="All 2 branches covered.">            if (party.getName()==partyName){</span>
+<span class="fc" id="L29">                party.decreaseVote();</span>
+<span class="fc" id="L30">                return party.getVote();</span>
+<span class="fc" id="L31">            }}</span>
+<span class="fc" id="L32">        System.out.println(&quot;No such a Party named &quot;+partyName+&quot;.&quot;);</span>
+<span class="fc" id="L33">        return 0;</span>
     }
 
     public static void selectionResults(){
